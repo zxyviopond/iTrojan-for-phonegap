@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mobile Web App</title>
+
+<!--Set proper View for different devices-->
+ <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+<!--Customization on Themes and Structures -->
+<!--
+<link href="shakefrenzy.css" rel="stylesheet" type="text/css"/>
+-->
+<link rel="stylesheet" href="css/default.min.css" />
+    <link rel="stylesheet" href="css/woody.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />    
+    <link href="css/itrojan.css" type="text/css" rel="stylesheet" />    
+    <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700' rel='stylesheet' type='text/css'>
+    
+      <link href='css/iscroll.css' rel='stylesheet' type='text/css'>
+
+
+<!--Basic Jquery Script use Remote Ones-->
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+<script src="http://cubiq.org/dropbox/iscroll4/src/iscroll.js"></script>
+
+
+<script type="text/javascript">
+
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper');
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+/* * * * * * * *
+ *
+ * Use this for high compatibility (iDevice + Android)
+ *
+ */
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this for iDevice only
+ *
+ */
+//document.addEventListener('DOMContentLoaded', loaded, false);
+/*
+ * * * * * * * */
+
+
+/* * * * * * * *
+ *
+ * Use this if nothing else works
+ *
+ */
+//window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
+/*
+ * * * * * * * */
+</script>
+
+</head> 
+
+<body> 
+<div data-role="page" id="pageall">
+<div id="page1">
+<div id="header"><div data-role="header">HELLO</div>
+</div>
+<div id="wrapper">
+<div id="scroller">
+<div id="content1" data-role="content">
+            
+            <ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search">
+            
+           <li data-role="list-divider">Divider</li>
+	<li><a href="acura.html">Acura</a></li>
+	<li><a href="audi.html">Audi</a></li>
+	<li><a href="bmw.html">BMW</a></li>
+    <li><a href="bmw.html">BMW</a></li>
+    <li><a href="bmw.html">BMW</a></li>
+    <li><a href="bmw.html">BMW</a></li>
+    <li><a href="bmw.html">BMW</a></li>
+            </ul>
+            
+         </div>
+</div>
+<img id="i-hold-the-effectively-fixed-background-image" style="width:auto;height:auto;position:absolute; top:0px; bottom:0px; left:0px; right:0px; z-index:-1;" src="images/background.jpg"></img>
+</div>
+</div><!--end if page1-->
+
+
+<div id="footer">
+<div data-role="footer">
+<div data-role="navbar">
+ <ul>
+		<li><a data-transition="fade" href="housedetail.php?address=1123W 37th Dr. Los Angeles,CA,USA,90007"  data-icon="home">House</a></li>
+		<li><a data-transition="fade" href="transportation.html" data-icon="trans" class="ui-btn-active ui-state-persist">Trans</a></li>
+        <li><a href="security.html" data-icon="safety">Security</a></li>
+        <li><a href="bookmark.html"  data-icon="star">Bookmark</a></li>
+	</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+</html>

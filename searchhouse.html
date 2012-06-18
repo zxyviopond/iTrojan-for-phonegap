@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html><head> 
+	<title>Woody</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="description" content="Woody is a clean theme for mobile devices.">
+    
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="css/default.min.css" />
+    <link rel="stylesheet" href="css/woody.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />    
+    <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700' rel='stylesheet' type='text/css'>
+
+	<!-- JavaScripts -->
+ 	<script type="text/javascript" src="js/klass.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.0.1.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="js/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="js/misc.js"></script>
+    <!--Added js -->
+    <!--for google map -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+</head>
+
+<body> 
+
+<!-- HOMEPAGE -->
+<div data-role="page" id="searchhouse" data-title="searchhouse">
+<!-- HEADER -->
+<div data-role="header" id="searchhouse_header">
+<h2>Find House</h2>
+<a href="#" data-icon="back">Back</a>
+<a href="#"><img src="images/about.png" width="14" style="top:3px;position:relative;">Profile</a>
+</div>
+<!-- Wrapper -->
+<div class="wrapper">
+<br>
+<input type="search" name="search" id="searchbox" value="" placeholder="Search Address"/>
+<br>
+<div class="map_container">
+            <div id="the_map" style="height: 300px;"></div>
+        </div><!--END OF: Map -->
+
+</div><!--END OF: Wrapper -->
+    
+    <!-- Footer -->
+    <!--
+	<div data-role="footer" class="footer" data-position="fixed">
+        <h4></h4>
+	</div>
+    -->
+    <!-- END OF: Footer -->
+    
+</div><!-- END OF: Homepage -->
+
+
+</body>
+</html>
