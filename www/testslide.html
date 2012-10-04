@@ -1,0 +1,135 @@
+
+<!DOCTYPE html> 
+<html><head> 
+	<title>Woody</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="description" content="Woody is a clean theme for mobile devices.">
+    
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="css/default.min.css" />
+    <link rel="stylesheet" href="css/woody.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />    
+    <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700' rel='stylesheet' type='text/css'>
+
+	<!-- JavaScripts -->
+ 	<script type="text/javascript" src="js/klass.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.0.1.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="js/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/misc.js"></script>
+    
+<!--Phonegap-->
+  <!--Phonegap-->
+    <script src="cordova-1.8.1.js"></script>
+   <script src="ChildBrowser.js"></script>
+</head>
+
+<body> 
+
+<!-- HOMEPAGE -->
+<div data-role="page" id="homepage" data-title="Homepage">
+<script type="text/javascript">
+$("#homepage").live("pageshow",function(){
+    $('.slider').cycle({
+
+        fx:     'fade',
+
+        speed:   400,
+
+        timeout: 3000
+
+    });
+
+});
+</script>
+
+<div data-role="header" id="homepage_header" data-position="inline">
+<h2>Rent Info</h2>
+<a href="readhousinginfo.html" data-icon="back" data-direction="reverse">Back</a>
+<a href="#"><img src="images/about.png" width="14" style="top:3px;position:relative;">Profile</a>
+</div>
+
+
+<!-- Wrapper -->
+<div data-role="content" data-iscroll>
+<div class="wrapper">
+    
+    <!-- Slider Container-->
+    <div class="slider_container">
+    
+        <!-- Prev/Next Buttons-->
+       
+        
+        <!-- Slider-->
+        <div class="slider">
+            <img src="images/slide_item1.jpg" />
+            <img src="images/slide_item2.jpg" />
+            <img src="images/slide_item3.jpg" />
+            <img src="images/slide_item4.jpg" />
+        </div><!--END OF: Slider -->
+        
+	</div><!--END OF: Slider Container -->
+
+    <!--More Description -->
+    <div data-role="content" class="content" style="background-image:url(custom/woodybackground1.jpg);"><div style="background-color:rgba(255,255,255,0.7); margin:-11px;padding:16px;">
+            This is the part for description</div>
+        </div><!-- END OF: Content -->
+        <!--Collapse-->
+   
+		<div data-role="collapsible" data-collapsed="false" data-theme="c" data-content-theme="d">
+			<h3>House Detail</h3>
+            <div style="margin-top:2px;color:rgba(255,255,255,1);text-shadow:none;font-size:14px; line-height:22px;"><b>Rent</b>: $500<br><b>Lease Type</b>: Sublease<br><b>House Type</b>: 2 Bedroom 1 bath<br><b>Lease Period</b>: 06/21/2012&nbsp;-&nbsp;06/21/2013<br><b>Facility Covered</b>: Water,Trash<br><b>Address</b>:  1123W 37th Dr. LA CA &nbsp;<span  onclick="showstreetview()" class="ui-icon ui-icon-arrow-r" style="float:right;position:relative;top:2px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+		</div>
+        
+        <div data-role="collapsible" data-collapsed="false" data-theme="c" data-content-theme="d">
+			<h3>Contact</h3>
+            <div style="margin-top:2px;color:rgba(255,255,255,1);text-shadow:none;font-size:14px; line-height:22px;"><b>Contact</b>: John Smith<br><b>Phone</b>: <a href="tel:2138888888" style="color:inherit;">2138888888</a><br><b>Email</b>: <a href="email:johns@usc.edu" style="color:inherit;">johns@usc.edu</a>
+            <br><b>Website</b>: <a href="email:johns@usc.edu" style="color:inherit;">www.myhouse.com</a>
+            </div>
+		</div>
+		
+    <br><br><br><br>
+    </div><!--END OF: Wrapper -->
+    </div><!--End of Content-->
+    
+    <div id="portfolio" data-title="Portfolio" style="display:none">
+
+	<ul id="gallery" class="gallery">
+		<li><a rel="external" href="images/full/001.jpg"><img src="images/thumb/001.jpg" alt="Image 001" /></a></li>
+		
+	</ul><!-- END OF: Portfolio -->
+    
+</div>
+<script type="text/javascript">
+var childbrowser;
+
+$( '#homepage' ).live( 'pageshow',function(event){
+	childbrowser = ChildBrowser.install();
+
+    
+   
+});
+function showstreetview(){
+	if(childbrowser!=null){        		
+         window.plugins.childBrowser.showWebPage("file://localhost/Users/zxyviopond/Desktop/Test%20iphone%20project/iTrojan/www/searchmapindex1.html");	
+				                
+	}
+	
+}
+</script>
+</div><!-- END OF: Homepage -->
+
+
+
+
+
+<!--Remain because it affect the slideshow-->
+
+
+</body>
+</html>

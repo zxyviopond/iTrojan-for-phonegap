@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html><head> 
+	<title>Woody</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="description" content="Woody is a clean theme for mobile devices.">
+      
+      <!--Customized Stylesheet-->
+     <link rel="stylesheet" href="css/itrojan.css" />
+     
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="css/default.min.css" />
+    <link rel="stylesheet" href="css/woody.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />    
+    <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700' rel='stylesheet' type='text/css'>
+
+	<!-- JavaScripts -->
+ 	<script type="text/javascript" src="js/klass.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<!--<script src="js/jquery.mobile-1.0.1.js"></script>-->
+	<script src="js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="js/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/misc.js"></script>
+<!--For new  version of iscroll -->
+    <script src="js/jquery.actual.min.js"></script>
+    <script src="js/iscroll-watusi.js"></script>
+    <script src="js/jquery.mobile.iscrollview.js"></script>
+</head>
+
+<body> 
+
+<!-- HOMEPAGE -->
+<div data-role="page" id="homepage" data-title="Homepage">
+<!-- HEADER -->
+<div data-role="header" id="homepage_header" data-position="inline">
+<h2>Bookmark</h2>
+<a href="searchmapindex.html" data-icon="back">Back</a>
+<a href="#"><img src="images/about.png" width="14" style="top:3px;position:relative;">Profile</a>
+</div>
+<!-- Wrapper -->
+
+<div data-role="content" data-iscroll>
+<div id="contentwrapper">
+<div data-role="button">
+    <p id="addressinfo" style="font-size:10px;">1123 W 37th Dr. Los Angeles, CA90007, USA</p>
+    </div>
+
+    <div data-role="listview" data-inset="true">
+    <li data-role="list-divider">Phone</li>
+    <li>
+    <input type="tel" name="phone" id="phone" data-mini="true" value="21388888888"  />
+    </li>
+    <li data-role="list-divider">Contact Person</li>
+    <li style="background-image:url(custom/woodybackground1.jpg)">
+    <input type="text" name="contact" id="contact" data-mini="true" value="John Smith"/>
+    
+    <li data-role="list-divider">Website</li>
+    <li>
+    <input type="url" name="website" id="website" data-mini="true" value="www.myhouse.com"/>
+    </li>
+   <li data-role="list-divider">My Rating</li>
+   <li style="background-image:url(custom/woodybackground1.jpg);"><div id="star1" onclick="putstar(1)" class="ui-icon ui-icon-star" style="display:inline-block">&nbsp;</div>&nbsp;<div id="star2" onclick="putstar(2)" class="ui-icon ui-icon-star" style="display:inline-block">&nbsp;</div>&nbsp;<div id="star3" onclick="putstar(3)" class="ui-icon ui-icon-star" style="display:inline-block">&nbsp;</div>&nbsp;<div id="star4" onclick="putstar(4)" style="display:inline-block" class="ui-icon ui-icon-star">&nbsp;</div>&nbsp;<div id="star5" onClick="putstar(5)" style="display:inline-block" class="ui-icon ui-icon-star">&nbsp;</div></li>
+    </div>
+    <script type="text/javascript">
+	function saveandmove(){
+	   alert("saved");
+	   $.mobile.changePage("bookmarksaved.html");	
+	}
+	function putstar(num){
+		for(i=1;i<=5;i++){
+		$("#star"+i).addClass("ui-icon-star");
+		$("#star"+i).removeClass("yellowstar");
+		}
+		for(i=1;i<=num;i++){
+		$("#star"+i).removeClass("ui-icon-star");
+		$("#star"+i).addClass("yellowstar");
+		}
+		
+	}
+     </script>
+     <div onclick="saveandmove()" style="margin-top:20px;" data-role="button">Save</div>
+<br><br><br><br>
+</div><!--End of Contentwrapper-->
+</div><!--END OF: Wrapper -->
+
+<!--END OF: Wrapper -->
+    
+    <!-- Footer -->
+    
+<div data-role="footer" data-position="inline" id="my-persistent-footer">
+  <div data-role="navbar">
+     <ul>
+		<li><a data-transition="fade" href="housedetail.php?address=1123W 37th Dr. Los Angeles,CA,USA,90007"  data-icon="home">House</a></li>
+		<li><a data-transition="fade" href="transportation.html" data-icon="trans">Trans</a></li>
+        <li><a data-transition="fade" href="security.html"  data-icon="safety">Security</a></li>
+        <li><a data-transition="fade" href="bookmark.html"  data-icon="star" class="ui-btn-active ui-state-persist">Bookmark</a></li>
+	</ul>
+  </div>
+</div>
+    
+    <!-- END OF: Footer -->
+    
+</div><!-- END OF: Homepage -->
+
+
+
+
+</body>
+</html>

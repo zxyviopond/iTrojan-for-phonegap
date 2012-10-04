@@ -1,0 +1,118 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <title>AnythingSlider playground - jsFiddle demo by Mottie</title>
+  
+  <script type='text/javascript' src='http://code.jquery.com/jquery-git.js'></script>
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css"/>
+  
+    
+    
+      <script type='text/javascript' src="http://proloser.github.com/AnythingSlider/js/jquery.anythingslider.js"></script>
+    
+  
+    
+      <link rel="stylesheet" type="text/css" href="http://proloser.github.com/AnythingSlider/css/anythingslider.css"/>
+    
+    
+  
+    
+    
+      <script type='text/javascript' src="http://proloser.github.com/AnythingSlider/js/jquery.easing.1.2.js"></script>
+    
+  
+    
+    
+      <script type='text/javascript' src="http://proloser.github.com/AnythingSlider/js/swfobject.js"></script>
+    
+  
+  <style type='text/css'>
+    /*** Set Slider dimensions here! Version 1.7+ ***/
+ul#slider {
+    width: 300px;
+    height: 200px;
+    list-style: none;
+}
+
+.caption { display: none; }
+#current-caption { width: 300px; margin: 10px auto; text-align: center; }
+
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+$(function(){
+var updateCaption = function(slider){
+    var cap = slider.$currentPage.find('.caption').html();
+    $('#current-caption')
+        .html(cap)
+        .fadeIn(200);
+};
+
+$('#slider').anythingSlider({
+
+    // *********** Callbacks ***********
+    // Callback when the plugin finished initializing
+    onInitialized: function(e, slider) { updateCaption(slider); },
+    
+    // Callback before slide animates
+    onSlideBegin: function(e, slider) {
+        $('#current-caption').fadeOut(200);
+    },
+    
+    // Callback when slide completes - no event variable!
+    onSlideComplete: function(slider) { updateCaption(slider); }
+
+});
+});//]]>  
+
+</script>
+
+
+</head>
+<body>
+  <ul id="slider">
+    
+    <li>
+        <img src="http://placekitten.com/300/200" alt="" />
+        <div class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet scelerisque nisi a feugiat. Praesent mollis, mauris adipiscing tempus ultrices, justo libero pellentesque nibh, ut rutrum ipsum arcu eu mauris.</div>
+    </li>
+    
+    <li>
+        <img src="http://placehold.it/300x200" alt="" />
+        <div class="caption">Phasellus arcu libero, posuere vitae iaculis id, lobortis ut dui. Morbi pulvinar vestibulum quam, ac blandit orci ultricies suscipit. Pellentesque eu metus ut ligula molestie accumsan non vel neque.</div>
+    </li>
+    
+    <li>
+        <img src="http://ipsumimage.appspot.com/300x200.png" alt="" />
+        <div class="caption">Integer neque leo, imperdiet quis mollis ac, dictum et massa. Nam viverra blandit rhoncus. Phasellus ultricies ornare sapien id condimentum. Nulla vestibulum dolor nec sapien feugiat dapibus.</div>
+    </li>
+    
+    <li>
+        <img src="http://dummyimage.com/300x200/000/fff.jpg" alt="" />
+        <div class="caption">Curabitur sapien urna, scelerisque at vehicula et, rutrum sit amet leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</div>
+    </li>
+    
+</ul>
+
+<div id="current-caption"></div>
+
+<!-- Add stylesheets here -->
+<link rel="stylesheet" href="http://proloser.github.com/AnythingSlider/css/theme-metallic.css">
+<!-- Older IE stylesheet, to reposition navigation arrows, added AFTER the theme stylesheet above -->
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="http://proloser.github.com/AnythingSlider/css/anythingslider-ie.css" type="text/css" media="screen" />
+<![endif]-->
+
+
+  
+</body>
+
+
+</html>
+

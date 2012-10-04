@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.ui-icon-searchicon{
+	background-image: url(../images/search.png)!important;
+}
+.ui-icon-trans{
+	background-image: url(../images/bus.png)!important;
+}/* CSS Document */
+
+.ui-icon-safety{
+	background-image: url(../images/safety.png)!important;
+}/* CSS Document */
+
+.yellowstar{
+	background-image:url(../custom/yellowstar_icon.png)!important;
+}
+
+.ui-icon-first{
+	background-image: url(../custom/first.png)!important;
+}
+.ui-icon-second{
+	background-image: url(../custom/second.png)!important;
+}
+.ui-icon-third{
+	background-image: url(../custom/third.png)!important;!important;
+}
+
+.ui-icon-fourth{
+background-image: url(../custom/fourth.png)!important;
+}
+
+.ui-icon-recenticon{
+background-image: url(../images/myrecent.png)!important;
+}

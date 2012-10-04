@@ -1,0 +1,116 @@
+<!DOCTYPE PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+ <title>Woody</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="description" content="Woody is a clean theme for mobile devices.">
+      
+    <!--Customized Stylesheet-->
+     <link rel="stylesheet" href="css/itrojan.css" />
+     
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="css/default.min.css" />
+    <link rel="stylesheet" href="css/woody.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />    
+    <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700' rel='stylesheet' type='text/css'>
+    <!--Boostrap style-->
+    
+    <!--for google map autocomplete-->
+   <!--  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>  -->
+
+	<!-- JavaScripts -->
+ 	<script type="text/javascript" src="js/klass.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="js/code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/misc.js"></script>
+    <!--Added js -->
+    
+    <!--for google map --> 
+    
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script> 
+  <!--GMAP plugins -->
+  <script type="text/javascript" src="js/jquery.ui.map.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.map.services.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.map.extensions.js"></script>
+  
+  <!--For new  version of iscroll -->
+    <script src="js/jquery.actual.min.js"></script>
+    <script src="js/iscroll-watusi.js"></script>
+    <script src="js/jquery.mobile.iscrollview.js"></script>
+    <!--Phonegap-->
+    <script src="cordova-1.8.1.js"></script>
+   <script src="ChildBrowser.js"></script>
+ </head>
+ <body style="background-color:black;">
+ 
+ <!-- HOMEPAGE -->
+<div data-role="page" id="homepage" data-title="searchhouse">
+<!--Script-->
+<script type="text/javascript">
+$("#homepage").live("pageshow",function(){
+    $('.slider').cycle({
+
+        fx:     'shuffle',
+
+        speed:   400,
+
+        timeout: 3000,
+
+        next:   '#next',
+
+        prev:   '#prev'
+
+    });
+
+});
+</script>
+<!-- HEADER -->
+<div data-role="header" id="searchhouse_header" data-position="inline">
+<h2>Main Menu</h2>
+<a href="index.html" data-icon="back">Logout</a>
+<a href="profile.html"><img src="images/about.png" width="14" style="top:3px;position:relative;">Profile</a>
+</div>
+<!-- Wrapper -->
+<div data-role="content" data-iscroll>
+<div>
+<div class="slider" style="height:150px; margin-bottom:-10px; border:none; background:none">
+            <img src="custom/uscback.jpeg" />
+            <img src="custom/uscback2.jpeg" />
+            <img src="custom/uscback3.jpeg" />
+            <img src="custom/uscback4.jpeg" />
+        </div><!--END OF: Slider -->
+<div data-role="listview" data-inset="true">
+<li><a data-transition="slide" href="houseindex.html"><img src="custom/home.png" style="height:50px;width:50px;"/>House<p><br></p></a></li>
+<li><a data-transition="slide" href="courseindex.html"><img src="custom/book.png" style="height:50px;width:50px;"/>Course<p><br></p></a></li>
+<li><a data-transition="slide" href="courseindex.html"><img src="custom/food.png" style="height:50px;width:50px;"/>Food<p><br></p></a></li>
+<li><a data-transition="slide" href="houseindex.html"><img src="custom/news.png" style="height:50px;width:50px;"/>News<p><br></p></a></li>
+<li><a data-transition="slide" href="courseindex.html"><img src="custom/job.png" style="height:50px;width:50px;"/>Job<p><br></p></a></li>
+
+<li></li>
+</div>
+
+<br>
+<br>
+</div>
+</div><!--end of content-->
+    
+    <!-- Footer -->
+    <!--
+	<div data-role="footer" class="footer" data-position="fixed">
+        <h4></h4>
+	</div>
+    -->
+    <!-- END OF: Footer -->
+    
+</div><!-- END OF: Homepage -->
+  
+ </body>
+</html>
+

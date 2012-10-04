@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--Meta-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+
+<!--StyleSheets-->
+<link rel="stylesheet" href="css/default.min.css" />
+<link rel="stylesheet" href="css/woody.min.css" />
+<link rel="stylesheet" href="css/main.css" />
+<link href="css/itrojan.css" type="text/css" rel="stylesheet" /><link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,700' rel='stylesheet' type='text/css'>
+<link href='css/iscroll.css' rel='stylesheet' type='text/css'>
+
+
+<!--Javascript-->
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script src="js/iscroll.js"></script>
+<!--Javascript-GoogleMap-->
+<script type="text/javascript" src="js/jquery.ui.map.js"></script>
+<script type="text/javascript" src="js/jquery.ui.map.services.js"></script>
+ <script type="text/javascript" src="js/jquery.ui.map.extensions.js"></script>
+ <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+<!--Title-->
+<title>HouseFinder</title>
+<!--Script for Iscroll setup-->
+<script type="text/javascript">
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper');
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+</script>
+
+
+</head>
+
+<body>
+<div id="page_index" data-role="page">
+<div id="header"><!--Begin of Header in Iscroll-->
+<div data-role="header" id="searchhouse_header">
+<h2>Find House</h2>
+<a href="index.html" data-icon="back">Back</a>
+<a href="#"><img src="images/about.png" width="14" style="top:3px;position:relative;">Profile</a>
+</div>
+</div><!--End of Header in Iscroll-->
+<div id="wrapper"><!--Begin of Wrapper in Iscroll-->
+<div id="scroller"><!--Begin of Scroller in Iscroll-->
+<div data-role="content"><!--Begin of Content-->
+<form id="target">
+<input type="search" name="search" id="searchbox" value="" placeholder="Search Address"/>
+</form>
+
+
+</div><!--End of Content-->
+</div><!--End of Scroller in Iscroll-->
+<!--Fix the background image-->
+<img id="i-hold-the-effectively-fixed-background-image" style="width:auto;height:auto;position:absolute; top:0px; bottom:0px; left:0px; right:0px; z-index:-1;" src="images/background.jpg"></img>
+</div>
+</div><!--End of Wrapper in Iscroll-->
+
+</div><!--End if page_index-->
+
+</body>
+</html>
